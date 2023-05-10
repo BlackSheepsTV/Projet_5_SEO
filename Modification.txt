@@ -1,0 +1,4 @@
+1: resize images et format AVIF
+2: Sémantique
+3: alt -> images
+4: defer -> script
