@@ -16,7 +16,6 @@
       $(this)
         .children(".gallery-item")
         .each(function(index) {
-          $.fn.mauGallery.methods.responsiveImageItem($(this));
           $.fn.mauGallery.methods.moveItemInRowWrapper($(this));
           $.fn.mauGallery.methods.wrapItemInColumn($(this), options.columns);
           var theTag = $(this).data("gallery-tag");
@@ -107,11 +106,6 @@
     },
     moveItemInRowWrapper(element) {
       element.appendTo(".gallery-items-row");
-    },
-    responsiveImageItem(element) {
-      if (element.prop("tagName") === "IMG") {
-        element.addClass("img-fluid");
-      }
     },
     openLightBox(element, lightboxId) {
       $(`#${lightboxId}`)
