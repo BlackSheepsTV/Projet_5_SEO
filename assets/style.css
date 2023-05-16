@@ -167,6 +167,17 @@ body {
 	background-color: #A8D5D8 ;
 	position: relative;
 }
+.service__description {
+	position: relative;
+}
+.service__description img {
+	position: absolute;
+	width: 15%;
+	height: auto;
+	top: 0;
+	right: 0;
+
+}
 #services .container::before{
 	content: ' ';
 	background-color: #1C6474;

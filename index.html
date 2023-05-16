@@ -28,8 +28,8 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" media="all">
+	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" as="font">
 	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
 	<script src="./assets/maugallery.js" defer></script>
@@ -45,8 +45,8 @@
 </head>
 
 <body>
-<header class="top-header">
-	<h1 class="name">Nina Carducci</h1>
+<header class="top-header" itemscope itemtype="http://schema.org/Portfolio">
+	<h1 class="name" itemprop="name">Nina Carducci</h1>
 	<nav class="nav">   
 		<ul>
 			<li><a href="#about">À propos </a></li>
@@ -144,16 +144,22 @@
 	<section id="services">
 		<h2 class="title">Mes services</h2>
 		<div class="container">
-			<div class="service">
+			<div class="service" itemprop="itemReviewed" itemscope itemtype="http://schema.org/Product">
 				<div class="service__description">
-					<h3>Shooting photo</h3>
+					<h3 itemprop="name">Shooting photo</h3>
+					<img src="./assets/images/camera.avif" alt="appareil photo" itemprop="image">
 					<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
+					<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+						<meta itemprop="ratingValue" content="4.5">
+						<meta itemprop="reviewCount" content="100">
+					</div>
 				</div>
-				<div class="service__price">
-					<h3>350€/demi journée</h3>
+				<div class="service__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+					<meta itemprop="price" content="350.00">
+					<meta itemprop="priceCurrency" content="EUR">
+					<h3 >350€/demi journée</h3>
 					<span>Matériel, déplacement inclus</span>
 				</div>
-
 			</div>
 			<div class="service">
 				<div class="service__description">
@@ -207,10 +213,7 @@
 			<img src="./assets/images/camera.avif" alt="appareil photo" loading="lazy">
 		</div>
 	</div>
-</footer>
 
-<div itemscope itemtype="http://schema.org/Portfolio">
-	<h1 itemprop="name">Nina Carducci</h1>
 	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 		<span itemprop="streetAddress">68 avenue Alsace-Lorraine</span>,
 		<span itemprop="addressLocality">Bordeaux</span>,
@@ -232,20 +235,10 @@
 	<div itemprop="telephone">05 56 67 78 89</div>
 	<a itemprop="url" href="https://www.ninacarducci.fr">https://www.ninacarducci.fr</a>
 
-	<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-		<div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Product">
-			<span itemprop="name">Shooting photo</span>
-			<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-				<meta itemprop="price" content="350.00">
-				<meta itemprop="priceCurrency" content="EUR">
-			</div>
-		</div>
-		<meta itemprop="ratingValue" content="4.5">
-		<meta itemprop="reviewCount" content="100">
-	</div>
-
 	<div itemprop="description">Portfolio de Nina Carducci photographe de Bordeaux</div>
 </div>
+
+</footer>
 
 <script src="./assets/jquery-3.4.1.min.js"></script>
 </body>
