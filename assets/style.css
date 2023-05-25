@@ -215,6 +215,9 @@ body {
 	padding-inline: 100px;
 	padding-block: 100px;
 }
+#contact a {
+	color: #023783;
+}
 
 #contact .container {
 	display: flex;
